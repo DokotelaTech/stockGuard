@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StockContext } from "../context/stockContext";
+import { StockContext } from "../context/stockContext.js";
 
 export default function useStock() {
   const stock = useContext(StockContext);
