@@ -9,12 +9,14 @@ import BlockchainTrace from "../pages/BlockchainTrace";
 import Dashboard from "../pages/Dashboard";
 import ExpiryAlerts from "../pages/ExpiryAlerts";
 import Forecasts from "../pages/Forecasts";
-import Inventory from "../pages/Inventory";
+import Inventory from "../pages/Inventory.jsx";
 import ScanBatch from "../pages/ScanBatch";
 import Transfers from "../pages/Transfers";
 
 export default function AppRoutes() {
-  const { isAuthenticated, signIn, signOut } = useAuth();
+  const { isAuthenticated, authLoading, signOut } = useAuth();
+
+  if (authLoading) return <div role="status" style={{ padding: 24 }}>Checking your session…</div>;
 
   return (
     <Routes>
@@ -24,7 +26,7 @@ export default function AppRoutes() {
           isAuthenticated ? (
             <Navigate to="/dashboard" replace />
           ) : (
-            <Login onLogin={signIn} />
+            <Login />
           )
         }
       />
@@ -41,16 +43,16 @@ export default function AppRoutes() {
           )
         }
       >
-        <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="/scan" element={<ScanBatch />} />
-        <Route path="/batches/:batchId" element={<BatchDetails />} />
-        <Route path="/forecasts" element={<Forecasts />} />
-        <Route path="/expiry" element={<ExpiryAlerts />} />
-        <Route path="/transfers" element={<Transfers />} />
-        <Route path="/blockchain" element={<BlockchainTrace />} />
-        <Route path="/ordering" element={<AIOrdering />} />
+        <Route index element={<Navigate to="/dashboard" replace />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="inventory" element={<Inventory />} />
+        <Route path="scan" element={<ScanBatch />} />
+        <Route path="batches/:batchId" element={<BatchDetails />} />
+        <Route path="forecasts" element={<Forecasts />} />
+        <Route path="expiry" element={<ExpiryAlerts />} />
+        <Route path="transfers" element={<Transfers />} />
+        <Route path="blockchain" element={<BlockchainTrace />} />
+        <Route path="ordering" element={<AIOrdering />} />
       </Route>
       <Route
         path="*"

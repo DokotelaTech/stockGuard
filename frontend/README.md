@@ -1,16 +1,11 @@
-# React + Vite
+# StockGuard frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Run locally
 
-Currently, two official plugins are available:
+1. Copy `.env.example` to `.env.local`.
+2. Set `VITE_FIREBASE_API_KEY` to the web API key from the Firebase project.
+3. From this directory, run `npm install` and `npm run dev`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Firebase Authentication and Firestore use the StockGuard Firebase project configured in `src/firebase.js`. Users can access the app as soon as they register. Firestore security rules should allow authenticated users to manage their own profile and inventory documents associated with their UID.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Other API integrations, including forecasts, remain behind the frontend service boundary for the API team.

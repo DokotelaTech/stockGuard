@@ -9,3 +9,5 @@ export function StockProvider({ children }) {
     </StockContext.Provider>
   );
 }
+
+export default StockProvider;

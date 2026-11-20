@@ -26,8 +26,8 @@ const navigation = [
 export default function Sidebar({ open, onClose, onLogout }) {
   const navigate = useNavigate();
 
-  function logout() {
-    onLogout();
+  async function logout() {
+    await onLogout();
     navigate("/login", { replace: true });
   }
 
