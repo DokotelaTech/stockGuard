@@ -10,8 +10,11 @@ import {
     getMedicines,
     addMedicine,
     updateMedicine,
-    deleteMedicine
+    deleteMedicine,
+    seedDemoInventory,
 } from "../services/inventoryService";
+
+
 
 const initialForm = {
     medicineName: "",
@@ -19,6 +22,7 @@ const initialForm = {
     batchNumber: "",
     manufacturer: "",
     quantity: "",
+    averageDailyUsage: "",
     unitPrice: "",
     manufactureDate: "",
     expiryDate: "",
@@ -37,7 +41,9 @@ export default function Inventory() {
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+    const [seeding, setSeeding] = useState(false);
     const [error, setError] = useState("");
+    const [notice, setNotice] = useState("");
 
     // FETCH INVENTORY
     const loadMedicines = async () => {
@@ -112,6 +118,8 @@ export default function Inventory() {
             if (
                 !Number.isFinite(Number(form.quantity)) ||
                 Number(form.quantity) < 0 ||
+                !Number.isFinite(Number(form.averageDailyUsage || 0)) ||
+                Number(form.averageDailyUsage || 0) < 0 ||
                 !Number.isFinite(Number(form.unitPrice)) ||
                 Number(form.unitPrice) < 0
             ) {
@@ -161,6 +169,7 @@ export default function Inventory() {
             batchNumber: medicine.batchNumber || "",
             manufacturer: medicine.manufacturer || "",
             quantity: String(medicine.quantity ?? ""),
+            averageDailyUsage: String(medicine.averageDailyUsage ?? ""),
             unitPrice: String(medicine.unitPrice ?? ""),
             manufactureDate: medicine.manufactureDate || "",
             expiryDate: medicine.expiryDate || "",
@@ -193,6 +202,24 @@ export default function Inventory() {
         }
     };
 
+    const handleSeedDemoInventory = async () => {
+        try {
+            setSeeding(true);
+            setError("");
+            setNotice("");
+            const result = await seedDemoInventory();
+            await loadMedicines();
+            setNotice(result.added > 0
+                ? `Added ${result.added} demo stock items${result.skipped ? `; skipped ${result.skipped} already seeded` : ""}.`
+                : "Demo stock is already in your inventory.");
+        } catch (seedError) {
+            console.error("Demo inventory seed failed:", seedError);
+            setError(seedError.message || "Unable to add demo stock data.");
+        } finally {
+            setSeeding(false);
+        }
+    };
+
     // SEARCH MEDICINES
 const filteredMedicines = medicines.filter((medicine) => {
 
@@ -215,7 +242,11 @@ const filteredMedicines = medicines.filter((medicine) => {
                 title="Medicine Inventory"
                 description="Browse stock, check quantities, and manage medicines."
                 action={
-                    <div style={{ display: "flex", gap: "10px" }}>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+
+                        <Button variant="light" onClick={handleSeedDemoInventory} disabled={seeding}>
+                            {seeding ? "Adding demo stock…" : "Add demo stock"}
+                        </Button>
 
                         <Button onClick={() => {
                             setForm(initialForm);
@@ -235,6 +266,7 @@ const filteredMedicines = medicines.filter((medicine) => {
                     {error}
                 </p>
             )}
+            {notice && <p role="status" style={{ color: "#087b58", marginBottom: "15px" }}>{notice}</p>}
 
             {/* INVENTORY SUMMARY */}
 
@@ -324,6 +356,7 @@ const filteredMedicines = medicines.filter((medicine) => {
                                 ["batchNumber", "Batch Number", "text"],
                                 ["manufacturer", "Manufacturer", "text"],
                                 ["quantity", "Quantity", "number"],
+                                ["averageDailyUsage", "Average daily usage (units, optional)", "number"],
                                 ["unitPrice", "Unit Price (R)", "number"],
                                 ["manufactureDate", "Manufacturing Date", "date"],
                                 ["expiryDate", "Expiry Date", "date"],

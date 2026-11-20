@@ -2,15 +2,18 @@ import {
     collection,
     addDoc,
     getDocs,
+    doc,
     updateDoc,
     deleteDoc,
-    doc,
+    // writeBatch,
+    serverTimestamp,
     query,
     where,
-    serverTimestamp
 } from "firebase/firestore";
 
-import { db, auth } from "./firebaseConfig";
+
+import { auth, db } from "../../firebase.js";
+// import {  auth } from "./firebaseConfig";
 
 const inventoryCollection = collection(db, "inventory");
 
@@ -52,6 +55,33 @@ export const addMedicine = async (medicine) => {
         updatedAt: serverTimestamp()
     });
 };
+
+
+// verifying the scanned product
+export const verifyMedicineBatch = async (batchNumber) => {
+    const user = auth.currentUser;
+
+    if (!user) {
+        throw new Error("You must be logged in to verify a batch.");
+    }
+
+    const inventoryRef = collection(db, "inventory");
+
+    const batchQuery = query(
+        inventoryRef,
+        where("batchNumber", "==", batchNumber.trim()),
+        where("createdBy", "==", user.uid)
+    );
+
+    const snapshot = await getDocs(batchQuery);
+
+    return snapshot.docs.map((document) => ({
+        id: document.id,
+        ...document.data()
+    }));
+
+};
+
 
 // UPDATE MEDICINE
 export const updateMedicine = async (id, medicine) => {

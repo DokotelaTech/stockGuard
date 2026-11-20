@@ -479,6 +479,41 @@
 .stock-card {
   grid-column: span 1;
 }
+.stock-chart-list {
+  display: grid;
+  gap: 13px;
+  margin-top: 22px;
+}
+.stock-chart-row {
+  display: grid;
+  grid-template-columns: minmax(70px, 1fr) minmax(70px, 2fr) 34px;
+  align-items: center;
+  gap: 10px;
+  color: #52647b;
+  font-size: 10px;
+}
+.stock-chart-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.stock-chart-row strong {
+  color: #243850;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.stock-chart-track {
+  height: 10px;
+  overflow: hidden;
+  background: #edf2f7;
+  border-radius: 99px;
+}
+.stock-chart-track span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #08a878, #43c7a0);
+  border-radius: inherit;
+}
 .expiry-card {
   grid-column: span 1;
 }
@@ -1225,7 +1260,7 @@ td:first-child strong {
   margin: 0 auto;
 }
 .ordering-summary {
-  max-width: 760px;
+  max-width: none;
 }
 .medicine-result-card,
 .transfer-card {
@@ -1513,6 +1548,33 @@ td:first-child strong {
 }
 .status-pill.pending i {
   background: #e8a333;
+}
+.status-pill.low {
+  color: #087b58;
+  background: #e0f7ec;
+}
+.status-pill.medium {
+  color: #a46a16;
+  background: #fff2d9;
+}
+.status-pill.high {
+  color: #bd4353;
+  background: #ffe8eb;
+}
+.forecast-horizon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #718096;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.forecast-horizon select {
+  padding: 8px 10px;
+  color: #253650;
+  background: white;
+  border: 1px solid #e4ebf5;
+  border-radius: 8px;
 }
 .forecast-page-grid {
   display: grid;

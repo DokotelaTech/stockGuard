@@ -1,5 +1,6 @@
 import { createBlockchainService } from "./blockchain/createBlockchainService";
 import { createTraceabilityReader } from "./blockchain/traceabilityReader";
+import { getExpiryInsights, getForecast } from "./aiService";
 
 function createUnavailableService(domain) {
   return new Proxy(
@@ -21,7 +22,10 @@ export function createApiClient() {
   return {
     auth: createUnavailableService("auth"),
     inventory: createUnavailableService("inventory"),
-    forecasts: createUnavailableService("forecasts"),
+    forecasts: {
+      get: getForecast,
+      expiryInsights: getExpiryInsights,
+    },
     transfers: createUnavailableService("transfers"),
     blockchain: createBlockchainService(createTraceabilityReader()),
   };
