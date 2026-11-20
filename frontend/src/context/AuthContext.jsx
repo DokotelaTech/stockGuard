@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { AuthContext } from "./authContext";
+import { AuthContext } from "./authContext.js";
 
 export function AuthProvider({ children }) {
   // Keep the UI flow in memory until the authentication API is connected.

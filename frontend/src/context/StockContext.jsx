@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StockContext } from "./stockContext";
+import { StockContext } from "./stockContext.js";
 
 export function StockProvider({ children }) {
   const [stock, setStock] = useState(null);
