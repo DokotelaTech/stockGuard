@@ -1,0 +1,63 @@
+export const rewardsAbi = [
+  {
+    name: "pharmacyCount",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    name: "pharmacyAt",
+    type: "function",
+    stateMutability: "view",
+    inputs: [{ name: "index", type: "uint256" }],
+    outputs: [{ name: "", type: "address" }],
+  },
+  {
+    name: "getPharmacy",
+    type: "function",
+    stateMutability: "view",
+    inputs: [{ name: "pharmacy", type: "address" }],
+    outputs: [
+      { name: "pharmacyName", type: "string" },
+      { name: "points", type: "uint256" },
+      { name: "claimed", type: "uint256" },
+      { name: "exists", type: "bool" },
+    ],
+  },
+  {
+    name: "claimableOf",
+    type: "function",
+    stateMutability: "view",
+    inputs: [{ name: "pharmacy", type: "address" }],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    name: "totalSupply",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    name: "symbol",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "string" }],
+  },
+  {
+    name: "name",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "string" }],
+  },
+  {
+    name: "decimals",
+    type: "function",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint8" }],
+  },
+];

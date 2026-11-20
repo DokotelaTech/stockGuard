@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Check, ExternalLink, Search, ShieldCheck } from "lucide-react";
+import { Check, ExternalLink, Gift, Search, ShieldCheck } from "lucide-react";
 import Button from "../components/common/Button";
 import EmptyState from "../components/common/EmptyState";
 import PageHeader from "../components/common/PageHeader";
+import PharmacyRewardsPanel from "../components/blockchain/PharmacyRewardsPanel";
 import { getApiClient } from "../services/api";
 import {
   blockchainConfig,
@@ -15,6 +16,7 @@ function shortenAddress(address) {
 }
 
 export default function BlockchainTrace() {
+  const [activeView, setActiveView] = useState("trace");
   const [batchId, setBatchId] = useState("");
   const [trace, setTrace] = useState(null);
   const [error, setError] = useState("");
@@ -43,10 +45,28 @@ export default function BlockchainTrace() {
   return (
     <>
       <PageHeader
-        title="Blockchain Trace"
-        description="Review medicine provenance and batch milestones."
+        title="Blockchain"
+        description="Verify batch provenance on Fuji and pharmacy rewards on BNB Smart Chain."
       />
-      <section className="card trace-card">
+      <div className="blockchain-view-switch">
+        <Button
+          variant={activeView === "trace" ? "primary" : "light"}
+          onClick={() => setActiveView("trace")}
+        >
+          <ShieldCheck size={16} />
+          Batch traceability
+        </Button>
+        <Button
+          variant={activeView === "rewards" ? "primary" : "light"}
+          onClick={() => setActiveView("rewards")}
+        >
+          <Gift size={16} />
+          Pharmacy rewards
+        </Button>
+      </div>
+      {activeView === "trace" ? (
+        <>
+          <section className="card trace-card">
         <form className="trace-search" onSubmit={handleVerify}>
           <label>
             <Search size={17} />
@@ -145,6 +165,10 @@ export default function BlockchainTrace() {
         </div>
         <span className="info-tag">{canRead ? "Fuji testnet" : "Setup needed"}</span>
       </section>
+        </>
+      ) : (
+        <PharmacyRewardsPanel />
+      )}
     </>
   );
 }

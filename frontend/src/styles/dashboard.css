@@ -2147,3 +2147,9 @@ td:first-child strong {
     animation-duration: 0.01ms !important;
   }
 }
+.blockchain-view-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
