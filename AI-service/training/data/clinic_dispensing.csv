@@ -1,0 +1,541 @@
+date,clinic_id,clinic_name,medicine_id,medicine_name,current_stock,units_dispensed,day_of_week,month
+2026-08-22,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,29.4,17.4,5,8
+2026-08-22,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,59.1,16.5,5,8
+2026-08-22,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,25.5,11.1,5,8
+2026-08-22,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,60.3,16.7,5,8
+2026-08-22,CLN-B,Clinic B,MED-METF,Metformin 850mg,52.2,13.4,5,8
+2026-08-22,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,76.7,22.4,5,8
+2026-08-23,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,61.9,16.5,6,8
+2026-08-23,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,32.1,15.4,6,8
+2026-08-23,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,30.6,20.4,6,8
+2026-08-23,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,64.3,19.7,6,8
+2026-08-23,CLN-B,Clinic B,MED-METF,Metformin 850mg,54.8,12.8,6,8
+2026-08-23,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,62.7,23.8,6,8
+2026-08-24,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,39.7,21.0,0,8
+2026-08-24,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,50.5,21.0,0,8
+2026-08-24,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.5,28.1,0,8
+2026-08-24,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,58.9,31.2,0,8
+2026-08-24,CLN-B,Clinic B,MED-METF,Metformin 850mg,52.8,16.9,0,8
+2026-08-24,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,81.9,28.9,0,8
+2026-08-25,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,32.4,22.2,1,8
+2026-08-25,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,54.8,15.6,1,8
+2026-08-25,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,53.1,29.4,1,8
+2026-08-25,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,68.5,20.0,1,8
+2026-08-25,CLN-B,Clinic B,MED-METF,Metformin 850mg,68.3,19.4,1,8
+2026-08-25,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,68.4,29.9,1,8
+2026-08-26,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,46.0,25.4,2,8
+2026-08-26,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,54.5,20.1,2,8
+2026-08-26,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,40.2,20.6,2,8
+2026-08-26,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,55.4,20.8,2,8
+2026-08-26,CLN-B,Clinic B,MED-METF,Metformin 850mg,87.4,17.8,2,8
+2026-08-26,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,79.5,23.0,2,8
+2026-08-27,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,40.0,15.9,3,8
+2026-08-27,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,53.8,19.6,3,8
+2026-08-27,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,56.9,29.3,3,8
+2026-08-27,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,58.1,21.3,3,8
+2026-08-27,CLN-B,Clinic B,MED-METF,Metformin 850mg,62.1,22.3,3,8
+2026-08-27,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,48.0,21.4,3,8
+2026-08-28,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,52.5,19.0,4,8
+2026-08-28,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,55.4,19.5,4,8
+2026-08-28,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,47.4,24.8,4,8
+2026-08-28,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,60.4,25.2,4,8
+2026-08-28,CLN-B,Clinic B,MED-METF,Metformin 850mg,55.1,20.7,4,8
+2026-08-28,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,59.3,25.0,4,8
+2026-08-29,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,52.3,11.4,5,8
+2026-08-29,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,45.2,11.6,5,8
+2026-08-29,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.7,20.8,5,8
+2026-08-29,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,63.5,18.9,5,8
+2026-08-29,CLN-B,Clinic B,MED-METF,Metformin 850mg,63.8,11.8,5,8
+2026-08-29,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,43.3,12.2,5,8
+2026-08-30,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,30.0,10.9,6,8
+2026-08-30,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,31.4,15.1,6,8
+2026-08-30,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,64.5,17.4,6,8
+2026-08-30,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,76.1,14.8,6,8
+2026-08-30,CLN-B,Clinic B,MED-METF,Metformin 850mg,61.9,9.8,6,8
+2026-08-30,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,59.9,15.1,6,8
+2026-08-31,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,19.1,26.0,0,8
+2026-08-31,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,48.6,20.6,0,8
+2026-08-31,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,23.3,24.1,0,8
+2026-08-31,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,57.1,23.0,0,8
+2026-08-31,CLN-B,Clinic B,MED-METF,Metformin 850mg,65.3,19.8,0,8
+2026-08-31,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,61.4,32.9,0,8
+2026-09-01,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,47.7,18.6,1,9
+2026-09-01,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,65.4,19.8,1,9
+2026-09-01,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,50.4,29.8,1,9
+2026-09-01,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,47.2,28.5,1,9
+2026-09-01,CLN-B,Clinic B,MED-METF,Metformin 850mg,51.1,16.3,1,9
+2026-09-01,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,44.3,24.9,1,9
+2026-09-02,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,41.7,25.2,2,9
+2026-09-02,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,29.8,13.0,2,9
+2026-09-02,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,57.6,27.7,2,9
+2026-09-02,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,108.7,30.7,2,9
+2026-09-02,CLN-B,Clinic B,MED-METF,Metformin 850mg,50.2,20.6,2,9
+2026-09-02,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,69.0,17.9,2,9
+2026-09-03,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,38.8,19.4,3,9
+2026-09-03,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,42.9,16.5,3,9
+2026-09-03,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,47.4,30.7,3,9
+2026-09-03,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,49.5,22.0,3,9
+2026-09-03,CLN-B,Clinic B,MED-METF,Metformin 850mg,57.7,12.2,3,9
+2026-09-03,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,91.5,26.2,3,9
+2026-09-04,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,59.7,23.2,4,9
+2026-09-04,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,27.2,16.9,4,9
+2026-09-04,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,34.1,22.6,4,9
+2026-09-04,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,52.7,31.2,4,9
+2026-09-04,CLN-B,Clinic B,MED-METF,Metformin 850mg,51.5,22.3,4,9
+2026-09-04,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.8,30.2,4,9
+2026-09-05,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,44.4,15.6,5,9
+2026-09-05,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.7,10.9,5,9
+2026-09-05,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,26.6,17.1,5,9
+2026-09-05,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,67.6,11.1,5,9
+2026-09-05,CLN-B,Clinic B,MED-METF,Metformin 850mg,67.4,19.8,5,9
+2026-09-05,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,69.3,18.4,5,9
+2026-09-06,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,48.3,21.4,6,9
+2026-09-06,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,61.6,11.9,6,9
+2026-09-06,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,68.0,20.6,6,9
+2026-09-06,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,46.6,16.9,6,9
+2026-09-06,CLN-B,Clinic B,MED-METF,Metformin 850mg,89.8,8.0,6,9
+2026-09-06,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,62.3,25.8,6,9
+2026-09-07,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,66.9,21.1,0,9
+2026-09-07,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,31.6,14.5,0,9
+2026-09-07,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,39.1,29.0,0,9
+2026-09-07,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,62.5,22.7,0,9
+2026-09-07,CLN-B,Clinic B,MED-METF,Metformin 850mg,86.1,20.3,0,9
+2026-09-07,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,74.7,26.8,0,9
+2026-09-08,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,44.3,14.5,1,9
+2026-09-08,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,26.7,15.5,1,9
+2026-09-08,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,40.0,22.9,1,9
+2026-09-08,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,45.1,26.3,1,9
+2026-09-08,CLN-B,Clinic B,MED-METF,Metformin 850mg,57.7,19.0,1,9
+2026-09-08,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,80.0,25.1,1,9
+2026-09-09,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,65.1,24.8,2,9
+2026-09-09,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,34.6,18.3,2,9
+2026-09-09,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,48.6,25.6,2,9
+2026-09-09,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,48.7,23.4,2,9
+2026-09-09,CLN-B,Clinic B,MED-METF,Metformin 850mg,68.4,19.3,2,9
+2026-09-09,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,93.2,36.5,2,9
+2026-09-10,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,40.7,19.3,3,9
+2026-09-10,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,36.1,13.0,3,9
+2026-09-10,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,63.1,27.7,3,9
+2026-09-10,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,55.2,19.8,3,9
+2026-09-10,CLN-B,Clinic B,MED-METF,Metformin 850mg,62.6,10.3,3,9
+2026-09-10,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,57.1,22.2,3,9
+2026-09-11,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,43.6,19.2,4,9
+2026-09-11,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,23.0,11.9,4,9
+2026-09-11,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,25.7,35.0,4,9
+2026-09-11,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,92.6,18.3,4,9
+2026-09-11,CLN-B,Clinic B,MED-METF,Metformin 850mg,47.4,30.5,4,9
+2026-09-11,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.1,25.0,4,9
+2026-09-12,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,30.2,23.1,5,9
+2026-09-12,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,56.7,12.5,5,9
+2026-09-12,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,39.4,20.6,5,9
+2026-09-12,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,44.4,15.7,5,9
+2026-09-12,CLN-B,Clinic B,MED-METF,Metformin 850mg,61.0,12.5,5,9
+2026-09-12,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,56.7,19.8,5,9
+2026-09-13,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,60.2,18.1,6,9
+2026-09-13,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,50.3,14.1,6,9
+2026-09-13,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,45.0,19.1,6,9
+2026-09-13,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,69.7,13.3,6,9
+2026-09-13,CLN-B,Clinic B,MED-METF,Metformin 850mg,96.4,13.1,6,9
+2026-09-13,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.8,25.2,6,9
+2026-09-14,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,28.3,19.6,0,9
+2026-09-14,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,48.9,23.7,0,9
+2026-09-14,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,18.8,28.4,0,9
+2026-09-14,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.8,26.4,0,9
+2026-09-14,CLN-B,Clinic B,MED-METF,Metformin 850mg,57.9,14.5,0,9
+2026-09-14,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,65.8,27.5,0,9
+2026-09-15,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,43.4,21.5,1,9
+2026-09-15,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,47.3,17.9,1,9
+2026-09-15,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,6.5,32.3,1,9
+2026-09-15,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,67.6,21.7,1,9
+2026-09-15,CLN-B,Clinic B,MED-METF,Metformin 850mg,59.4,20.1,1,9
+2026-09-15,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,69.9,19.4,1,9
+2026-09-16,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,22.0,29.6,2,9
+2026-09-16,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,40.1,22.4,2,9
+2026-09-16,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,29.2,26.2,2,9
+2026-09-16,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,84.5,21.3,2,9
+2026-09-16,CLN-B,Clinic B,MED-METF,Metformin 850mg,91.0,21.2,2,9
+2026-09-16,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,71.6,31.2,2,9
+2026-09-17,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,51.6,29.7,3,9
+2026-09-17,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,40.6,22.2,3,9
+2026-09-17,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,34.5,26.7,3,9
+2026-09-17,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,47.3,26.6,3,9
+2026-09-17,CLN-B,Clinic B,MED-METF,Metformin 850mg,62.1,22.0,3,9
+2026-09-17,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,76.3,31.1,3,9
+2026-09-18,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,56.0,30.0,4,9
+2026-09-18,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,44.0,12.6,4,9
+2026-09-18,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,37.2,21.8,4,9
+2026-09-18,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,74.6,28.7,4,9
+2026-09-18,CLN-B,Clinic B,MED-METF,Metformin 850mg,49.8,16.1,4,9
+2026-09-18,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,46.8,26.6,4,9
+2026-09-19,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,49.7,13.5,5,9
+2026-09-19,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,54.1,18.1,5,9
+2026-09-19,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,49.6,9.7,5,9
+2026-09-19,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.2,16.5,5,9
+2026-09-19,CLN-B,Clinic B,MED-METF,Metformin 850mg,34.1,20.0,5,9
+2026-09-19,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,73.9,16.5,5,9
+2026-09-20,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,67.1,9.9,6,9
+2026-09-20,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,57.7,15.0,6,9
+2026-09-20,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,57.2,16.6,6,9
+2026-09-20,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,68.5,20.5,6,9
+2026-09-20,CLN-B,Clinic B,MED-METF,Metformin 850mg,69.1,14.4,6,9
+2026-09-20,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,62.8,15.4,6,9
+2026-09-21,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,50.8,22.1,0,9
+2026-09-21,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,29.1,22.9,0,9
+2026-09-21,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,67.2,26.0,0,9
+2026-09-21,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,52.7,19.7,0,9
+2026-09-21,CLN-B,Clinic B,MED-METF,Metformin 850mg,77.7,19.7,0,9
+2026-09-21,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,84.9,26.5,0,9
+2026-09-22,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,57.6,26.1,1,9
+2026-09-22,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,79.9,21.1,1,9
+2026-09-22,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,14.9,25.6,1,9
+2026-09-22,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,58.1,29.1,1,9
+2026-09-22,CLN-B,Clinic B,MED-METF,Metformin 850mg,84.6,19.3,1,9
+2026-09-22,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,46.2,20.1,1,9
+2026-09-23,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,33.1,16.3,2,9
+2026-09-23,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,52.9,20.7,2,9
+2026-09-23,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,23.8,27.6,2,9
+2026-09-23,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,65.8,13.4,2,9
+2026-09-23,CLN-B,Clinic B,MED-METF,Metformin 850mg,71.9,17.0,2,9
+2026-09-23,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,67.1,29.3,2,9
+2026-09-24,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,48.4,25.7,3,9
+2026-09-24,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,34.4,21.0,3,9
+2026-09-24,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,48.0,25.7,3,9
+2026-09-24,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,59.1,26.0,3,9
+2026-09-24,CLN-B,Clinic B,MED-METF,Metformin 850mg,61.0,21.0,3,9
+2026-09-24,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,77.4,26.0,3,9
+2026-09-25,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,25.6,14.7,4,9
+2026-09-25,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,10.0,13.0,4,9
+2026-09-25,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,56.2,23.7,4,9
+2026-09-25,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,68.0,21.5,4,9
+2026-09-25,CLN-B,Clinic B,MED-METF,Metformin 850mg,84.9,23.3,4,9
+2026-09-25,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,85.3,26.2,4,9
+2026-09-26,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,32.4,16.6,5,9
+2026-09-26,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,22.8,11.1,5,9
+2026-09-26,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,39.6,15.3,5,9
+2026-09-26,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,90.8,19.4,5,9
+2026-09-26,CLN-B,Clinic B,MED-METF,Metformin 850mg,70.9,8.0,5,9
+2026-09-26,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,72.1,14.7,5,9
+2026-09-27,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,17.5,15.7,6,9
+2026-09-27,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,35.9,17.2,6,9
+2026-09-27,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,29.0,16.8,6,9
+2026-09-27,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.4,13.6,6,9
+2026-09-27,CLN-B,Clinic B,MED-METF,Metformin 850mg,69.9,12.7,6,9
+2026-09-27,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,84.8,20.3,6,9
+2026-09-28,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,22.8,21.3,0,9
+2026-09-28,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,40.0,23.2,0,9
+2026-09-28,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,50.8,30.9,0,9
+2026-09-28,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,70.2,22.2,0,9
+2026-09-28,CLN-B,Clinic B,MED-METF,Metformin 850mg,96.2,26.7,0,9
+2026-09-28,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,67.4,26.7,0,9
+2026-09-29,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,32.3,27.0,1,9
+2026-09-29,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,44.6,20.2,1,9
+2026-09-29,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,32.5,27.7,1,9
+2026-09-29,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,33.9,16.3,1,9
+2026-09-29,CLN-B,Clinic B,MED-METF,Metformin 850mg,58.1,14.4,1,9
+2026-09-29,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,94.1,25.3,1,9
+2026-09-30,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,30.6,27.1,2,9
+2026-09-30,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,38.9,20.3,2,9
+2026-09-30,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,47.8,25.3,2,9
+2026-09-30,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,59.9,25.2,2,9
+2026-09-30,CLN-B,Clinic B,MED-METF,Metformin 850mg,47.9,23.2,2,9
+2026-09-30,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,104.0,26.5,2,9
+2026-10-01,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,66.5,23.6,3,10
+2026-10-01,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,53.7,19.3,3,10
+2026-10-01,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,42.4,26.2,3,10
+2026-10-01,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.5,19.6,3,10
+2026-10-01,CLN-B,Clinic B,MED-METF,Metformin 850mg,75.0,15.5,3,10
+2026-10-01,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.5,30.8,3,10
+2026-10-02,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,51.8,21.5,4,10
+2026-10-02,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,59.0,17.7,4,10
+2026-10-02,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,40.0,19.1,4,10
+2026-10-02,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,42.6,14.7,4,10
+2026-10-02,CLN-B,Clinic B,MED-METF,Metformin 850mg,78.4,24.4,4,10
+2026-10-02,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,42.5,23.6,4,10
+2026-10-03,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,36.8,4.3,5,10
+2026-10-03,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.5,23.2,5,10
+2026-10-03,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,52.0,16.7,5,10
+2026-10-03,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,60.5,10.0,5,10
+2026-10-03,CLN-B,Clinic B,MED-METF,Metformin 850mg,63.7,13.9,5,10
+2026-10-03,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.2,22.1,5,10
+2026-10-04,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,34.7,18.9,6,10
+2026-10-04,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,69.4,17.1,6,10
+2026-10-04,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,31.7,15.0,6,10
+2026-10-04,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,62.1,21.5,6,10
+2026-10-04,CLN-B,Clinic B,MED-METF,Metformin 850mg,58.4,19.1,6,10
+2026-10-04,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,67.0,24.7,6,10
+2026-10-05,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,68.5,23.7,0,10
+2026-10-05,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,30.9,17.5,0,10
+2026-10-05,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.8,24.7,0,10
+2026-10-05,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,74.6,16.4,0,10
+2026-10-05,CLN-B,Clinic B,MED-METF,Metformin 850mg,82.2,16.7,0,10
+2026-10-05,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,53.2,16.9,0,10
+2026-10-06,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,32.6,15.9,1,10
+2026-10-06,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,42.3,19.9,1,10
+2026-10-06,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,42.6,25.4,1,10
+2026-10-06,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,49.9,23.5,1,10
+2026-10-06,CLN-B,Clinic B,MED-METF,Metformin 850mg,74.9,21.7,1,10
+2026-10-06,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,73.3,28.0,1,10
+2026-10-07,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,75.5,23.9,2,10
+2026-10-07,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,40.4,18.6,2,10
+2026-10-07,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,29.5,23.4,2,10
+2026-10-07,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,51.7,17.7,2,10
+2026-10-07,CLN-B,Clinic B,MED-METF,Metformin 850mg,70.0,18.6,2,10
+2026-10-07,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,53.5,26.7,2,10
+2026-10-08,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,56.1,26.3,3,10
+2026-10-08,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,35.2,18.3,3,10
+2026-10-08,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,47.8,28.7,3,10
+2026-10-08,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,64.0,16.9,3,10
+2026-10-08,CLN-B,Clinic B,MED-METF,Metformin 850mg,51.5,19.9,3,10
+2026-10-08,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,43.2,27.2,3,10
+2026-10-09,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,63.7,28.0,4,10
+2026-10-09,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,50.5,17.9,4,10
+2026-10-09,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,27.7,16.8,4,10
+2026-10-09,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,48.9,21.5,4,10
+2026-10-09,CLN-B,Clinic B,MED-METF,Metformin 850mg,95.0,21.8,4,10
+2026-10-09,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,52.4,21.8,4,10
+2026-10-10,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,69.2,17.1,5,10
+2026-10-10,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,48.7,8.6,5,10
+2026-10-10,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,20.2,26.2,5,10
+2026-10-10,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,58.6,11.1,5,10
+2026-10-10,CLN-B,Clinic B,MED-METF,Metformin 850mg,77.2,11.4,5,10
+2026-10-10,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,38.4,19.9,5,10
+2026-10-11,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,36.3,18.3,6,10
+2026-10-11,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,35.6,18.6,6,10
+2026-10-11,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,53.1,16.4,6,10
+2026-10-11,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.7,19.3,6,10
+2026-10-11,CLN-B,Clinic B,MED-METF,Metformin 850mg,73.1,6.8,6,10
+2026-10-11,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,68.5,14.8,6,10
+2026-10-12,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,51.7,17.0,0,10
+2026-10-12,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,25.8,15.7,0,10
+2026-10-12,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,48.6,29.3,0,10
+2026-10-12,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,86.8,20.2,0,10
+2026-10-12,CLN-B,Clinic B,MED-METF,Metformin 850mg,65.5,17.1,0,10
+2026-10-12,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,55.7,27.5,0,10
+2026-10-13,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,37.0,24.6,1,10
+2026-10-13,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,65.4,17.3,1,10
+2026-10-13,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,8.8,22.3,1,10
+2026-10-13,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,103.2,29.1,1,10
+2026-10-13,CLN-B,Clinic B,MED-METF,Metformin 850mg,35.9,17.3,1,10
+2026-10-13,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,60.7,25.2,1,10
+2026-10-14,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,28.3,21.9,2,10
+2026-10-14,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,52.9,21.2,2,10
+2026-10-14,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,55.5,20.5,2,10
+2026-10-14,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,67.6,30.9,2,10
+2026-10-14,CLN-B,Clinic B,MED-METF,Metformin 850mg,62.9,17.6,2,10
+2026-10-14,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,39.0,28.9,2,10
+2026-10-15,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,39.1,23.3,3,10
+2026-10-15,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,42.4,26.3,3,10
+2026-10-15,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,28.4,33.1,3,10
+2026-10-15,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,69.8,25.0,3,10
+2026-10-15,CLN-B,Clinic B,MED-METF,Metformin 850mg,67.7,15.4,3,10
+2026-10-15,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,60.1,31.3,3,10
+2026-10-16,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,44.7,15.9,4,10
+2026-10-16,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,39.9,15.3,4,10
+2026-10-16,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,19.4,26.1,4,10
+2026-10-16,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,72.2,16.2,4,10
+2026-10-16,CLN-B,Clinic B,MED-METF,Metformin 850mg,26.5,16.8,4,10
+2026-10-16,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,69.1,29.6,4,10
+2026-10-17,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,25.2,13.3,5,10
+2026-10-17,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,50.2,16.8,5,10
+2026-10-17,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.3,28.4,5,10
+2026-10-17,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,62.5,17.8,5,10
+2026-10-17,CLN-B,Clinic B,MED-METF,Metformin 850mg,74.4,16.8,5,10
+2026-10-17,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,57.2,23.9,5,10
+2026-10-18,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,37.8,14.5,6,10
+2026-10-18,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,67.5,16.7,6,10
+2026-10-18,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,38.6,17.1,6,10
+2026-10-18,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,61.3,17.5,6,10
+2026-10-18,CLN-B,Clinic B,MED-METF,Metformin 850mg,31.2,17.3,6,10
+2026-10-18,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,53.3,15.6,6,10
+2026-10-19,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,30.5,13.4,0,10
+2026-10-19,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,42.0,15.2,0,10
+2026-10-19,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,41.3,30.9,0,10
+2026-10-19,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,64.1,18.6,0,10
+2026-10-19,CLN-B,Clinic B,MED-METF,Metformin 850mg,50.4,23.1,0,10
+2026-10-19,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,73.4,22.8,0,10
+2026-10-20,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,54.7,21.8,1,10
+2026-10-20,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,55.5,18.8,1,10
+2026-10-20,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,44.8,22.3,1,10
+2026-10-20,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,46.8,21.8,1,10
+2026-10-20,CLN-B,Clinic B,MED-METF,Metformin 850mg,75.3,12.6,1,10
+2026-10-20,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,49.7,25.1,1,10
+2026-10-21,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,61.9,22.3,2,10
+2026-10-21,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,22.6,9.8,2,10
+2026-10-21,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,66.9,22.8,2,10
+2026-10-21,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,76.5,23.8,2,10
+2026-10-21,CLN-B,Clinic B,MED-METF,Metformin 850mg,48.2,14.3,2,10
+2026-10-21,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,65.9,28.3,2,10
+2026-10-22,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,42.2,24.9,3,10
+2026-10-22,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,47.4,20.0,3,10
+2026-10-22,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,57.1,29.6,3,10
+2026-10-22,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,31.3,16.2,3,10
+2026-10-22,CLN-B,Clinic B,MED-METF,Metformin 850mg,82.8,22.9,3,10
+2026-10-22,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,37.1,22.4,3,10
+2026-10-23,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,59.0,23.1,4,10
+2026-10-23,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,52.7,26.1,4,10
+2026-10-23,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,31.6,25.0,4,10
+2026-10-23,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,60.5,22.7,4,10
+2026-10-23,CLN-B,Clinic B,MED-METF,Metformin 850mg,95.7,14.8,4,10
+2026-10-23,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,82.0,33.6,4,10
+2026-10-24,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,57.8,12.5,5,10
+2026-10-24,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.6,16.1,5,10
+2026-10-24,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,54.5,23.9,5,10
+2026-10-24,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,74.6,19.2,5,10
+2026-10-24,CLN-B,Clinic B,MED-METF,Metformin 850mg,38.2,14.9,5,10
+2026-10-24,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,56.7,19.2,5,10
+2026-10-25,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,70.2,11.1,6,10
+2026-10-25,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,65.4,20.4,6,10
+2026-10-25,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,65.3,19.9,6,10
+2026-10-25,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,68.0,16.2,6,10
+2026-10-25,CLN-B,Clinic B,MED-METF,Metformin 850mg,71.0,9.1,6,10
+2026-10-25,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,45.5,19.1,6,10
+2026-10-26,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,43.8,22.5,0,10
+2026-10-26,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,58.4,26.1,0,10
+2026-10-26,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,48.7,26.5,0,10
+2026-10-26,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,62.0,22.9,0,10
+2026-10-26,CLN-B,Clinic B,MED-METF,Metformin 850mg,62.7,14.6,0,10
+2026-10-26,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,46.2,23.5,0,10
+2026-10-27,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,50.9,24.7,1,10
+2026-10-27,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,43.2,11.8,1,10
+2026-10-27,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,60.9,30.4,1,10
+2026-10-27,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,65.6,26.8,1,10
+2026-10-27,CLN-B,Clinic B,MED-METF,Metformin 850mg,48.7,15.5,1,10
+2026-10-27,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.7,27.8,1,10
+2026-10-28,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,61.5,27.8,2,10
+2026-10-28,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,26.3,18.4,2,10
+2026-10-28,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,48.3,25.2,2,10
+2026-10-28,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,56.3,21.9,2,10
+2026-10-28,CLN-B,Clinic B,MED-METF,Metformin 850mg,57.4,19.9,2,10
+2026-10-28,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,69.7,23.9,2,10
+2026-10-29,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,48.7,21.1,3,10
+2026-10-29,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,27.9,20.0,3,10
+2026-10-29,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,66.6,24.5,3,10
+2026-10-29,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,33.3,18.0,3,10
+2026-10-29,CLN-B,Clinic B,MED-METF,Metformin 850mg,65.4,11.5,3,10
+2026-10-29,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,63.2,26.6,3,10
+2026-10-30,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,4.9,27.5,4,10
+2026-10-30,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,68.4,20.5,4,10
+2026-10-30,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,39.3,21.9,4,10
+2026-10-30,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,51.6,19.7,4,10
+2026-10-30,CLN-B,Clinic B,MED-METF,Metformin 850mg,86.4,17.6,4,10
+2026-10-30,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,60.0,33.8,4,10
+2026-10-31,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,45.5,23.8,5,10
+2026-10-31,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,43.6,20.5,5,10
+2026-10-31,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,50.5,19.4,5,10
+2026-10-31,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,77.8,28.9,5,10
+2026-10-31,CLN-B,Clinic B,MED-METF,Metformin 850mg,79.5,10.7,5,10
+2026-10-31,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,57.7,17.5,5,10
+2026-11-01,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,45.5,19.8,6,11
+2026-11-01,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,45.2,14.6,6,11
+2026-11-01,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.4,20.2,6,11
+2026-11-01,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,75.0,8.5,6,11
+2026-11-01,CLN-B,Clinic B,MED-METF,Metformin 850mg,43.4,9.6,6,11
+2026-11-01,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,66.3,18.7,6,11
+2026-11-02,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,57.5,19.9,0,11
+2026-11-02,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,38.9,13.5,0,11
+2026-11-02,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,44.3,24.1,0,11
+2026-11-02,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,49.9,23.8,0,11
+2026-11-02,CLN-B,Clinic B,MED-METF,Metformin 850mg,65.9,21.8,0,11
+2026-11-02,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,35.6,18.9,0,11
+2026-11-03,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,41.7,22.6,1,11
+2026-11-03,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,44.6,18.5,1,11
+2026-11-03,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,59.2,27.4,1,11
+2026-11-03,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,47.4,18.2,1,11
+2026-11-03,CLN-B,Clinic B,MED-METF,Metformin 850mg,69.3,14.5,1,11
+2026-11-03,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,58.5,31.4,1,11
+2026-11-04,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,19.4,12.7,2,11
+2026-11-04,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,36.6,15.6,2,11
+2026-11-04,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,45.6,24.8,2,11
+2026-11-04,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,80.7,21.4,2,11
+2026-11-04,CLN-B,Clinic B,MED-METF,Metformin 850mg,52.1,16.2,2,11
+2026-11-04,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,42.0,28.4,2,11
+2026-11-05,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,46.5,24.2,3,11
+2026-11-05,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,68.8,18.3,3,11
+2026-11-05,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,75.9,24.0,3,11
+2026-11-05,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,45.8,21.8,3,11
+2026-11-05,CLN-B,Clinic B,MED-METF,Metformin 850mg,48.9,19.2,3,11
+2026-11-05,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,71.0,23.5,3,11
+2026-11-06,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,35.7,24.9,4,11
+2026-11-06,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,62.4,22.8,4,11
+2026-11-06,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,52.9,32.2,4,11
+2026-11-06,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,36.8,28.1,4,11
+2026-11-06,CLN-B,Clinic B,MED-METF,Metformin 850mg,52.0,17.6,4,11
+2026-11-06,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,56.4,26.9,4,11
+2026-11-07,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,73.2,15.5,5,11
+2026-11-07,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.2,12.8,5,11
+2026-11-07,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,46.1,18.0,5,11
+2026-11-07,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.7,16.2,5,11
+2026-11-07,CLN-B,Clinic B,MED-METF,Metformin 850mg,89.7,18.2,5,11
+2026-11-07,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,73.8,20.1,5,11
+2026-11-08,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,43.7,11.6,6,11
+2026-11-08,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,58.0,17.3,6,11
+2026-11-08,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,58.3,19.7,6,11
+2026-11-08,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,83.0,18.2,6,11
+2026-11-08,CLN-B,Clinic B,MED-METF,Metformin 850mg,59.7,14.7,6,11
+2026-11-08,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,21.0,20.2,6,11
+2026-11-09,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,0.0,24.2,0,11
+2026-11-09,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.8,12.0,0,11
+2026-11-09,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,27.6,28.4,0,11
+2026-11-09,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,85.6,19.8,0,11
+2026-11-09,CLN-B,Clinic B,MED-METF,Metformin 850mg,98.6,17.0,0,11
+2026-11-09,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,71.1,26.5,0,11
+2026-11-10,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,47.0,29.1,1,11
+2026-11-10,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,43.4,14.9,1,11
+2026-11-10,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,24.5,26.3,1,11
+2026-11-10,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,53.9,21.7,1,11
+2026-11-10,CLN-B,Clinic B,MED-METF,Metformin 850mg,65.5,22.6,1,11
+2026-11-10,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,63.4,25.3,1,11
+2026-11-11,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,54.3,23.6,2,11
+2026-11-11,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,29.4,14.9,2,11
+2026-11-11,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,38.8,30.9,2,11
+2026-11-11,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,71.7,17.0,2,11
+2026-11-11,CLN-B,Clinic B,MED-METF,Metformin 850mg,42.0,20.8,2,11
+2026-11-11,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,76.0,27.4,2,11
+2026-11-12,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,54.5,24.2,3,11
+2026-11-12,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,50.0,13.3,3,11
+2026-11-12,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,37.8,25.2,3,11
+2026-11-12,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,87.2,26.2,3,11
+2026-11-12,CLN-B,Clinic B,MED-METF,Metformin 850mg,84.7,26.1,3,11
+2026-11-12,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,70.3,26.0,3,11
+2026-11-13,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,46.8,25.7,4,11
+2026-11-13,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,57.4,19.4,4,11
+2026-11-13,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,34.1,26.2,4,11
+2026-11-13,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,74.5,21.0,4,11
+2026-11-13,CLN-B,Clinic B,MED-METF,Metformin 850mg,70.1,18.9,4,11
+2026-11-13,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,59.4,29.1,4,11
+2026-11-14,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,50.7,19.2,5,11
+2026-11-14,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,66.6,8.6,5,11
+2026-11-14,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,20.2,16.9,5,11
+2026-11-14,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,49.7,12.0,5,11
+2026-11-14,CLN-B,Clinic B,MED-METF,Metformin 850mg,60.9,13.7,5,11
+2026-11-14,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,74.3,17.6,5,11
+2026-11-15,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,49.7,17.6,6,11
+2026-11-15,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,54.2,15.1,6,11
+2026-11-15,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,39.5,10.5,6,11
+2026-11-15,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,65.5,7.5,6,11
+2026-11-15,CLN-B,Clinic B,MED-METF,Metformin 850mg,80.7,13.5,6,11
+2026-11-15,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,68.0,23.7,6,11
+2026-11-16,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,52.3,20.7,0,11
+2026-11-16,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,45.0,16.8,0,11
+2026-11-16,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,36.6,30.4,0,11
+2026-11-16,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,75.2,25.9,0,11
+2026-11-16,CLN-B,Clinic B,MED-METF,Metformin 850mg,79.6,15.1,0,11
+2026-11-16,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,66.5,29.3,0,11
+2026-11-17,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,32.1,19.6,1,11
+2026-11-17,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,53.1,16.7,1,11
+2026-11-17,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,51.6,22.6,1,11
+2026-11-17,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,61.9,17.7,1,11
+2026-11-17,CLN-B,Clinic B,MED-METF,Metformin 850mg,101.7,19.3,1,11
+2026-11-17,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,87.1,21.0,1,11
+2026-11-18,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,51.2,23.3,2,11
+2026-11-18,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,51.7,19.4,2,11
+2026-11-18,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,66.8,25.8,2,11
+2026-11-18,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,82.0,20.9,2,11
+2026-11-18,CLN-B,Clinic B,MED-METF,Metformin 850mg,64.1,16.3,2,11
+2026-11-18,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,71.8,22.2,2,11
+2026-11-19,CLN-A,Clinic A - Johannesburg,MED-AMOX,Amoxicillin 500mg,43.8,28.5,3,11
+2026-11-19,CLN-A,Clinic A - Johannesburg,MED-METF,Metformin 850mg,28.3,18.1,3,11
+2026-11-19,CLN-A,Clinic A - Johannesburg,MED-PARA,Paracetamol 500mg,21.1,25.5,3,11
+2026-11-19,CLN-B,Clinic B,MED-AMOX,Amoxicillin 500mg,68.4,19.0,3,11
+2026-11-19,CLN-B,Clinic B,MED-METF,Metformin 850mg,107.1,24.2,3,11
+2026-11-19,CLN-B,Clinic B,MED-PARA,Paracetamol 500mg,86.5,24.1,3,11
