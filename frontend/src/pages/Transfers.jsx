@@ -1,8 +1,14 @@
 import { useState } from "react";
-import { ArrowLeftRight, ArrowRight, Filter, Plus, X } from "lucide-react";
+import {
+  ArrowLeftRight,
+  ArrowRight,
+  Plus,
+  SlidersHorizontal,
+  X,
+} from "lucide-react";
 import Button from "../components/common/Button";
-import PageHeader from "../components/common/PageHeader";
 import EmptyState from "../components/common/EmptyState";
+import PageHeader from "../components/common/PageHeader";
 
 const columns = ["From", "To", "Medicine", "Quantity", "Status", "Date"];
 
@@ -15,17 +21,27 @@ export default function Transfers() {
         title="Transfers"
         description="Move stock between clinics and track each transfer."
         action={
-          <Button onClick={() => setFormOpen(!formOpen)}>
-            {formOpen ? <X size={16} /> : <Plus size={16} />}
+          <Button
+            variant={formOpen ? "secondary" : "primary"}
+            onClick={() => setFormOpen(!formOpen)}
+          >
+            {formOpen ? (
+              <X size={16} strokeWidth={2} />
+            ) : (
+              <Plus size={16} strokeWidth={2.2} />
+            )}
             {formOpen ? "Close" : "New transfer"}
           </Button>
         }
       />
+
       {formOpen && (
         <section className="card transfer-form">
           <div className="card-heading">
             <div>
-              <ArrowLeftRight size={19} className="heading-icon green-text" />
+              <span className="icon-badge emerald">
+                <ArrowLeftRight size={19} strokeWidth={1.9} />
+              </span>
               <div>
                 <h2>Create a stock transfer</h2>
                 <p>
@@ -58,12 +74,13 @@ export default function Transfers() {
               />
             </label>
             <Button type="button" disabled>
-              <ArrowRight size={16} />
+              <ArrowRight size={16} strokeWidth={2} />
               Submit transfer
             </Button>
           </form>
         </section>
       )}
+
       <section className="card table-card">
         <div className="table-toolbar">
           <div>
@@ -71,7 +88,7 @@ export default function Transfers() {
             <p>Recent stock movements between clinics</p>
           </div>
           <button className="filter-select" disabled>
-            <Filter size={15} />
+            <SlidersHorizontal size={15} strokeWidth={2} />
             Status
           </button>
         </div>
@@ -88,6 +105,7 @@ export default function Transfers() {
               <tr>
                 <td className="empty-state" colSpan={columns.length}>
                   <EmptyState>
+                    <ArrowLeftRight size={24} strokeWidth={1.7} />
                     Transfer records will appear here when the transfer service
                     is connected.
                   </EmptyState>

@@ -1,4 +1,16 @@
 export default function StockStatus({ status }) {
   if (!status) return null;
-  return <span className="stock-pill">{status}</span>;
+  const normalized = String(status).toLowerCase();
+  const tone = normalized.includes("expired") || normalized.includes("out")
+    ? "expired"
+    : normalized.includes("low")
+      ? "stock-low"
+      : "available";
+
+  return (
+    <span className={`stock-pill ${tone}`}>
+      <i aria-hidden="true" />
+      {status}
+    </span>
+  );
 }

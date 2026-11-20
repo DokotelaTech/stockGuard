@@ -1,14 +1,26 @@
+import { PackageOpen, PencilLine, Pill, Trash2 } from "lucide-react";
+import EmptyState from "../common/EmptyState";
 import StockStatus from "./StockStatus";
 
-const columns = [
-  "Medicine",
-  "Batch number",
-  "Expiry date",
-  "Stock on hand",
-  "Status",
-];
+export default function MedicineTable({
+  medicines = [],
+  onEdit,
+  onDelete,
+  emptyMessage = "No medicines found.",
+}) {
+  const hasActions = Boolean(onEdit || onDelete);
 
-export default function MedicineTable({ medicines = [], emptyMessage }) {
+  const columns = [
+    "Medicine",
+    "Category",
+    "Batch Number",
+    "Stock on Hand",
+    "Unit Price",
+    "Expiry Date",
+    "Status",
+    ...(hasActions ? ["Actions"] : []),
+  ];
+
   return (
     <div className="table-scroll">
       <table>
@@ -21,23 +33,89 @@ export default function MedicineTable({ medicines = [], emptyMessage }) {
         </thead>
         <tbody>
           {medicines.length ? (
-            medicines.map((medicine) => (
-              <tr key={medicine.id}>
-                <td>
-                  <strong>{medicine.name}</strong>
-                </td>
-                <td>{medicine.batchNumber}</td>
-                <td>{medicine.expiryDate}</td>
-                <td>{medicine.quantity}</td>
-                <td>
-                  <StockStatus status={medicine.status} />
-                </td>
-              </tr>
-            ))
+            medicines.map((medicine) => {
+              const name = medicine.medicineName || medicine.name || "Unnamed";
+              const expired =
+                medicine.expiryDate &&
+                new Date(`${medicine.expiryDate}T23:59:59`) < new Date();
+              const lowStock = Number(medicine.quantity) <= 10;
+              const derivedStatus =
+                medicine.status ||
+                (expired ? "Expired" : lowStock ? "Low Stock" : "Available");
+
+              return (
+                <tr key={medicine.id}>
+                  <td>
+                    <span className="medicine-cell">
+                      <span className="table-medicine-icon">
+                        <Pill size={15} strokeWidth={1.9} />
+                      </span>
+                      <strong>{name}</strong>
+                    </span>
+                  </td>
+                  <td>
+                    {medicine.category ? (
+                      <span className="category-tag">{medicine.category}</span>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                  <td>
+                    <span className="mono-badge">
+                      {medicine.batchNumber || "—"}
+                    </span>
+                  </td>
+                  <td>
+                    <strong>{Number(medicine.quantity ?? 0).toLocaleString()}</strong>
+                  </td>
+                  <td>
+                    {medicine.unitPrice !== undefined &&
+                    medicine.unitPrice !== ""
+                      ? `R ${Number(medicine.unitPrice).toFixed(2)}`
+                      : "—"}
+                  </td>
+                  <td>{medicine.expiryDate || "—"}</td>
+                  <td>
+                    <StockStatus status={derivedStatus} />
+                  </td>
+                  {hasActions && (
+                    <td>
+                      <div className="table-actions">
+                        {onEdit && (
+                          <button
+                            type="button"
+                            className="table-icon-btn"
+                            onClick={() => onEdit(medicine)}
+                            title="Edit medicine"
+                            aria-label={`Edit ${name}`}
+                          >
+                            <PencilLine size={15} strokeWidth={2} />
+                          </button>
+                        )}
+                        {onDelete && (
+                          <button
+                            type="button"
+                            className="table-icon-btn danger"
+                            onClick={() => onDelete(medicine.id)}
+                            title="Delete medicine"
+                            aria-label={`Delete ${name}`}
+                          >
+                            <Trash2 size={15} strokeWidth={2} />
+                          </button>
+                        )}
+                      </div>
+                    </td>
+                  )}
+                </tr>
+              );
+            })
           ) : (
             <tr>
               <td className="empty-state" colSpan={columns.length}>
-                {emptyMessage}
+                <EmptyState>
+                  <PackageOpen size={24} strokeWidth={1.7} />
+                  {emptyMessage}
+                </EmptyState>
               </td>
             </tr>
           )}

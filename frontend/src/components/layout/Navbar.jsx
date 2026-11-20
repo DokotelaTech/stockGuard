@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bell, Box, ChevronDown, LogOut, Menu } from "lucide-react";
+import { Bell, Building2, ChevronDown, LogOut, Menu } from "lucide-react";
 import SearchBar from "../common/SearchBar";
 
 export default function Navbar({ onMenuOpen, query, onSearch, onLogout }) {
@@ -12,7 +12,7 @@ export default function Navbar({ onMenuOpen, query, onSearch, onLogout }) {
         aria-label="Open navigation"
         onClick={onMenuOpen}
       >
-        <Menu size={20} />
+        <Menu size={20} strokeWidth={2} />
       </button>
       <SearchBar
         value={query}
@@ -26,20 +26,23 @@ export default function Navbar({ onMenuOpen, query, onSearch, onLogout }) {
             aria-label="Notifications"
             onClick={() => setNotificationsOpen(!notificationsOpen)}
           >
-            <Bell size={19} />
+            <Bell size={18} strokeWidth={1.9} />
           </button>
           {notificationsOpen && (
             <div className="notification-popover">
-              <strong>Notifications</strong>
+              <div className="notification-popover-header">
+                <strong>Notifications</strong>
+                <span className="info-tag">Up to date</span>
+              </div>
               <p>Notifications will appear here when data is available.</p>
             </div>
           )}
         </div>
         <span className="topbar-divider" />
         <button className="clinic-switcher" disabled>
-          <Box size={17} />
+          <Building2 size={16} strokeWidth={1.9} />
           <span>Select a clinic</span>
-          <ChevronDown size={15} />
+          <ChevronDown size={15} strokeWidth={2} />
         </button>
         <button
           className="user-menu"
@@ -47,7 +50,8 @@ export default function Navbar({ onMenuOpen, query, onSearch, onLogout }) {
           title="Log out"
           onClick={onLogout}
         >
-          <LogOut size={15} />
+          <LogOut size={16} strokeWidth={1.9} />
+          <span>Sign out</span>
         </button>
       </div>
     </header>

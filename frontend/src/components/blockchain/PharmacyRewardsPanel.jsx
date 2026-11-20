@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  Award,
   Coins,
   ExternalLink,
   Gift,
@@ -9,6 +10,7 @@ import {
 } from "lucide-react";
 import Button from "../common/Button";
 import EmptyState from "../common/EmptyState";
+import Loader from "../common/Loader";
 import {
   isRewardsConfigured,
   rewardsConfig,
@@ -77,9 +79,7 @@ export default function PharmacyRewardsPanel() {
       setData(await readRewards());
     } catch (err) {
       setError(
-        err instanceof Error
-          ? err.message
-          : "Unable to read pharmacy rewards.",
+        err instanceof Error ? err.message : "Unable to read pharmacy rewards.",
       );
     } finally {
       setLoading(false);
@@ -101,7 +101,7 @@ export default function PharmacyRewardsPanel() {
       <section className="metric-grid" aria-label="Pharmacy rewards summary">
         <article className="metric-card metric-medicines">
           <div className="metric-icon">
-            <Store size={23} />
+            <Store size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
             <span>Registered pharmacies</span>
@@ -110,7 +110,7 @@ export default function PharmacyRewardsPanel() {
         </article>
         <article className="metric-card metric-transfer">
           <div className="metric-icon">
-            <Coins size={23} />
+            <Coins size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
             <span>Points awarded</span>
@@ -119,7 +119,7 @@ export default function PharmacyRewardsPanel() {
         </article>
         <article className="metric-card metric-expiry">
           <div className="metric-icon">
-            <Gift size={23} />
+            <Gift size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
             <span>Claimable points</span>
@@ -128,12 +128,14 @@ export default function PharmacyRewardsPanel() {
         </article>
         <article className="metric-card metric-medicines">
           <div className="metric-icon">
-            <ShieldCheck size={23} />
+            <ShieldCheck size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
             <span>Reward network</span>
             <strong>BSC</strong>
-            <span>Chain ID {rewardsConfig.chainId}</span>
+            <span className="metric-subtext">
+              Chain ID {rewardsConfig.chainId}
+            </span>
           </div>
         </article>
       </section>
@@ -145,15 +147,17 @@ export default function PharmacyRewardsPanel() {
             <p>1 point equals 1 SGR reward token</p>
           </div>
           <span className="results-count">
-            {loading ? "Reading contract..." : `${pharmacies.length} pharmacies`}
+            {loading
+              ? "Reading contract…"
+              : `${pharmacies.length} pharmacies`}
           </span>
           <Button
             variant="light"
             onClick={load}
             disabled={loading || !canRead}
           >
-            <RefreshCw size={14} />
-            {loading ? "Loading" : "Refresh"}
+            <RefreshCw size={15} strokeWidth={2} />
+            {loading ? "Loading…" : "Refresh"}
           </Button>
         </div>
         <div className="table-scroll">
@@ -170,10 +174,12 @@ export default function PharmacyRewardsPanel() {
                 pharmacies.map((pharmacy) => (
                   <tr key={pharmacy.address}>
                     <td>
-                      <span className="table-medicine-icon">
-                        <Store size={13} />
+                      <span className="medicine-cell">
+                        <span className="table-medicine-icon">
+                          <Store size={15} strokeWidth={1.9} />
+                        </span>
+                        <strong>{pharmacy.name}</strong>
                       </span>
-                      <strong>{pharmacy.name}</strong>
                     </td>
                     <td>
                       <a
@@ -182,16 +188,20 @@ export default function PharmacyRewardsPanel() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {shortenAddress(pharmacy.address)}
-                        <ExternalLink size={11} />
+                        <span className="mono-badge">
+                          {shortenAddress(pharmacy.address)}
+                        </span>
+                        <ExternalLink size={13} strokeWidth={2} />
                       </a>
                     </td>
-                    <td>{formatNumber(pharmacy.points)}</td>
+                    <td>
+                      <strong>{formatNumber(pharmacy.points)}</strong>
+                    </td>
                     <td>{formatNumber(pharmacy.claimed)}</td>
                     <td>{formatNumber(pharmacy.claimable)}</td>
                     <td>
-                      <span className="status-pill">
-                        <i />
+                      <span className="status-pill low">
+                        <i aria-hidden="true" />
                         {pharmacy.exists ? "Registered" : "Inactive"}
                       </span>
                     </td>
@@ -200,14 +210,19 @@ export default function PharmacyRewardsPanel() {
               ) : (
                 <tr>
                   <td className="empty-state" colSpan={columns.length}>
-                    <EmptyState>
-                      {loading
-                        ? "Reading pharmacy rewards from BNB Smart Chain Testnet..."
-                        : error ||
+                    {loading ? (
+                      <div className="loader-center">
+                        <Loader label="Reading pharmacy rewards from BNB Smart Chain Testnet…" />
+                      </div>
+                    ) : (
+                      <EmptyState>
+                        <Award size={24} strokeWidth={1.7} />
+                        {error ||
                           (canRead
                             ? "No pharmacies are registered on this contract yet."
                             : "Add VITE_REWARDS_CONTRACT_ADDRESS to frontend/.env and restart the dev server.")}
-                    </EmptyState>
+                      </EmptyState>
+                    )}
                   </td>
                 </tr>
               )}
@@ -218,7 +233,7 @@ export default function PharmacyRewardsPanel() {
 
       <section className="info-card">
         <div className="info-icon">
-          <Gift size={20} />
+          <Gift size={20} strokeWidth={1.9} />
         </div>
         <div>
           <strong>
@@ -237,7 +252,7 @@ export default function PharmacyRewardsPanel() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  View on BscScan <ExternalLink size={11} />
+                  View on BscScan <ExternalLink size={13} strokeWidth={2} />
                 </a>
               </>
             ) : (
@@ -245,7 +260,9 @@ export default function PharmacyRewardsPanel() {
             )}
           </p>
         </div>
-        <span className="info-tag">{canRead ? "BSC testnet" : "Setup needed"}</span>
+        <span className="info-tag">
+          {canRead ? "BSC testnet" : "Setup needed"}
+        </span>
       </section>
     </>
   );

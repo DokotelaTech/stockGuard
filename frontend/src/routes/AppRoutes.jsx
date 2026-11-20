@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import Loader from "../components/common/Loader";
 import DashboardLayout from "../components/layout/DashboardLayout";
 import useAuth from "../hooks/useAuth";
 import Login from "../pages/auth/Login";
@@ -16,7 +17,13 @@ import Transfers from "../pages/Transfers";
 export default function AppRoutes() {
   const { isAuthenticated, authLoading, signOut } = useAuth();
 
-  if (authLoading) return <div role="status" style={{ padding: 24 }}>Checking your session…</div>;
+  if (authLoading) {
+    return (
+      <div className="loader-center" style={{ minHeight: "100vh" }}>
+        <Loader label="Checking your session…" />
+      </div>
+    );
+  }
 
   return (
     <Routes>

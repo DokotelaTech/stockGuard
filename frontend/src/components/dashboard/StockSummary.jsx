@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import {
-  AlertTriangle,
   ArrowLeftRight,
   ArrowRight,
   CalendarClock,
   Pill,
+  ShieldAlert,
 } from "lucide-react";
 
 const cards = [
@@ -17,7 +17,7 @@ const cards = [
   {
     label: "Stockout Risks",
     kind: "risk",
-    icon: AlertTriangle,
+    icon: ShieldAlert,
     href: "/inventory",
   },
   {
@@ -40,13 +40,13 @@ export default function StockSummary() {
       {cards.map(({ label, kind, icon: Icon, href }) => (
         <article className={`metric-card metric-${kind}`} key={kind}>
           <div className="metric-icon">
-            <Icon size={23} />
+            <Icon size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
             <span>{label}</span>
             <strong aria-label="No data">—</strong>
             <Link to={href}>
-              View details <ArrowRight size={13} />
+              View details <ArrowRight size={14} strokeWidth={2.2} />
             </Link>
           </div>
         </article>
