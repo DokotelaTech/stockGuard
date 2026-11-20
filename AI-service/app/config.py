@@ -16,11 +16,22 @@ class Settings(BaseSettings):
     log_level: str = "info"
 
     # CORS origins for frontend / backend integration (comma-separated in .env)
+    # cors_origins: list[str] = Field(
+    #     default=[
+    #         "http://localhost:3000",
+    #         "http://localhost:5173",
+    #         "http://localhost:8000",
+    #     ]
+    # )
+
+    # CORS origins for frontend / backend integration (comma-separated or JSON list in .env / env)
     cors_origins: list[str] = Field(
         default=[
             "http://localhost:3000",
             "http://localhost:5173",
             "http://localhost:8000",
+            "https://blockchain-uj-hackthon.web.app",
+            "https://blockchain-uj-hackthon.firebaseapp.com",
         ]
     )
 
@@ -49,6 +60,7 @@ class Settings(BaseSettings):
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
+        enable_decoding=False,
     )
 
     @field_validator("cors_origins", mode="before")
