@@ -174,7 +174,7 @@ export default function BlockchainTrace() {
                     <Link2 size={24} strokeWidth={1.7} />
                     {error ||
                       (canRead
-                        ? "Enter a seeded batch ID such as SG-001 to load its on-chain trace."
+                        ? "Enter a registered batch ID such as SG-001 to load its on-chain trace."
                         : "Add your deployed contract address to frontend/.env and restart the dev server.")}
                   </EmptyState>
                 )}

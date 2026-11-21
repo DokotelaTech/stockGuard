@@ -453,18 +453,19 @@ export default function ScanBatch() {
 
           {sampleBatches.length > 0 && (
             <div className="quick-batch-chips">
-              <span>Quick test batches:</span>
+              <span>Recent batches:</span>
               {sampleBatches.map((item) => (
                 <button
                   key={item.batchNumber}
                   type="button"
                   className="batch-chip"
+                  title={item.batchNumber}
                   onClick={() => {
                     setBatchNumber(item.batchNumber);
                     verifyCode(item.batchNumber);
                   }}
                 >
-                  {item.batchNumber}
+                  {item.medicineName || item.batchNumber}
                 </button>
               ))}
             </div>
