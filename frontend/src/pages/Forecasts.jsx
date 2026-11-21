@@ -66,6 +66,10 @@ export default function Forecasts() {
       )}
 
       <div className="forecast-page-grid">
+
+        {/* MEDICINE CALCUATION CARD */}
+
+        {/*  
         <section className="card forecast-summary">
           <div className="forecast-summary-icon">
             <Sparkles size={22} strokeWidth={1.9} />
@@ -87,6 +91,7 @@ export default function Forecasts() {
             {forecast?.results?.length ?? 0} medicines analysed
           </span>
         </section>
+        */}
 
         <section className="card demand-chart-card">
           <div className="card-heading">
