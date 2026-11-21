@@ -5,7 +5,6 @@ import Sidebar from "./Sidebar";
 
 export default function DashboardLayout({ onLogout }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [query, setQuery] = useState("");
 
   return (
     <div className="app-shell">
@@ -15,14 +14,9 @@ export default function DashboardLayout({ onLogout }) {
         onLogout={onLogout}
       />
       <main className="main-area">
-        <Navbar
-          onMenuOpen={() => setSidebarOpen(true)}
-          query={query}
-          onSearch={setQuery}
-          onLogout={onLogout}
-        />
+        <Navbar onMenuOpen={() => setSidebarOpen(true)} />
         <div className="page-content">
-          <Outlet context={{ query }} />
+          <Outlet />
         </div>
       </main>
     </div>

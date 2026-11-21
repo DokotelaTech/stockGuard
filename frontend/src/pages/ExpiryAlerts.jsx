@@ -6,7 +6,6 @@ import {
   CalendarClock,
   Flame,
   PackageX,
-  SlidersHorizontal,
 } from "lucide-react";
 import EmptyState from "../components/common/EmptyState";
 import Loader from "../components/common/Loader";
@@ -21,6 +20,13 @@ const columns = [
   "Risk",
   "Suggested action",
 ];
+
+function getExpiryRowTone(batch) {
+  const risk = String(batch.expiry_risk || "").toLowerCase();
+  if (risk === "high" || batch.days_until_expiry <= 30) return "row-danger";
+  if (risk === "medium" || batch.days_until_expiry <= 60) return "row-warning";
+  return "row-success";
+}
 
 export default function ExpiryAlerts() {
   const [insights, setInsights] = useState(null);
@@ -46,7 +52,9 @@ export default function ExpiryAlerts() {
 
   const batches = insights?.batches ?? [];
   const highRiskCount = batches.filter(
-    (b) => String(b.expiry_risk || "").toLowerCase() === "high",
+    (b) =>
+      String(b.expiry_risk || "").toLowerCase() === "high" ||
+      b.days_until_expiry <= 30,
   ).length;
   const totalWaste = batches.reduce(
     (sum, b) => sum + Number(b.estimated_waste_units || 0),
@@ -58,12 +66,6 @@ export default function ExpiryAlerts() {
       <PageHeader
         title="Expiry Alerts"
         description="Review expiry risk and suggested actions for your medicine batches."
-        action={
-          <span className="filter-select">
-            <SlidersHorizontal size={15} strokeWidth={2} />
-            {insights?.near_expiry_count ?? 0} near expiry
-          </span>
-        }
       />
 
       {error && (
@@ -80,7 +82,9 @@ export default function ExpiryAlerts() {
           </div>
           <div className="metric-content">
             <span>Near Expiry Batches</span>
-            <strong>{(insights?.near_expiry_count ?? 0).toLocaleString()}</strong>
+            <strong>
+              {(insights?.near_expiry_count ?? 0).toLocaleString()}
+            </strong>
             <span className="metric-subtext">Approaching expiry window</span>
           </div>
         </article>
@@ -114,7 +118,8 @@ export default function ExpiryAlerts() {
             <strong className="toolbar-title">Batch expiry watchlist</strong>
             <p>AI-evaluated expiry windows and mitigation recommendations</p>
           </div>
-          <span className="results-count">{batches.length} batches</span>
+
+          {/* <span className="results-count">{batches.length} batches</span> */}
         </div>
 
         <div className="table-scroll">
@@ -137,7 +142,10 @@ export default function ExpiryAlerts() {
                 </tr>
               ) : batches.length ? (
                 batches.map((batch) => (
-                  <tr key={`${batch.batch_code}-${batch.medicine_name}`}>
+                  <tr
+                    key={`${batch.batch_code}-${batch.medicine_name}`}
+                    className={getExpiryRowTone(batch)}
+                  >
                     <td>
                       <strong>{batch.medicine_name}</strong>
                     </td>
@@ -145,13 +153,17 @@ export default function ExpiryAlerts() {
                       <span className="mono-badge">{batch.batch_code}</span>
                     </td>
                     <td>
-                      {batch.days_until_expiry < 0
-                        ? `Expired ${Math.abs(batch.days_until_expiry)} days ago`
-                        : `${batch.days_until_expiry} days`}
+                      <strong>
+                        {batch.days_until_expiry < 0
+                          ? `Expired ${Math.abs(batch.days_until_expiry)} days ago`
+                          : `${batch.days_until_expiry} days`}
+                      </strong>
                     </td>
                     <td>
                       <strong>
-                        {Number(batch.estimated_waste_units || 0).toLocaleString()}
+                        {Number(
+                          batch.estimated_waste_units || 0,
+                        ).toLocaleString()}
                       </strong>
                     </td>
                     <td>

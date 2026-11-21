@@ -5,11 +5,9 @@ import {
   AlertTriangle,
   CalendarX2,
   CheckCircle2,
-  Database,
   Layers,
   Package,
   PencilLine,
-  Plus,
   PlusCircle,
   Search,
   X,
@@ -17,7 +15,6 @@ import {
 
 import Button from "../components/common/Button";
 import Loader from "../components/common/Loader";
-import PageHeader from "../components/common/PageHeader";
 import MedicineTable from "../components/inventory/MedicineTable";
 
 import {
@@ -25,8 +22,8 @@ import {
   addMedicine,
   updateMedicine,
   deleteMedicine,
-  seedDemoInventory,
 } from "../services/inventoryService";
+import { getMedicineAlertState } from "../utils/stockCalculations";
 
 const initialForm = {
   medicineName: "",
@@ -74,7 +71,6 @@ export default function Inventory() {
   const [showForm, setShowForm] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [seeding, setSeeding] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
 
@@ -215,45 +211,32 @@ export default function Inventory() {
     }
   };
 
-  const handleSeedDemoInventory = async () => {
-    try {
-      setSeeding(true);
-      setError("");
-      setNotice("");
-      const result = await seedDemoInventory();
-      await loadMedicines();
-      setNotice(
-        result.added > 0
-          ? `Added ${result.added} demo stock items${result.skipped ? `; skipped ${result.skipped} already seeded` : ""}.`
-          : "Demo stock is already in your inventory.",
-      );
-    } catch (seedError) {
-      console.error("Demo inventory seed failed:", seedError);
-      setError(seedError.message || "Unable to add demo stock data.");
-    } finally {
-      setSeeding(false);
-    }
-  };
+  const filteredMedicines = medicines
+    .filter((medicine) => {
+      const searchTerms = [query, globalQuery]
+        .filter(Boolean)
+        .map((value) => value.toLowerCase());
 
-  const filteredMedicines = medicines.filter((medicine) => {
-    const searchTerms = [query, globalQuery]
-      .filter(Boolean)
-      .map((value) => value.toLowerCase());
-
-    const searchable = `
+      const searchable = `
       ${medicine.medicineName || ""}
       ${medicine.batchNumber || ""}
       ${medicine.category || ""}
     `.toLowerCase();
 
-    return searchTerms.every((term) => searchable.includes(term));
-  });
+      return searchTerms.every((term) => searchable.includes(term));
+    })
+    .sort((a, b) => {
+      const rank = { "row-danger": 0, "row-warning": 1, "row-success": 2 };
+      const aTone = getMedicineAlertState(a).rowTone;
+      const bTone = getMedicineAlertState(b).rowTone;
+      return (rank[aTone] ?? 2) - (rank[bTone] ?? 2);
+    });
 
   const lowStockCount = medicines.filter(
-    (m) => Number(m.quantity) <= 10,
+    (m) => Number(m.quantity) <= 25,
   ).length;
-  const expiredCount = medicines.filter(
-    (m) => m.expiryDate && new Date(`${m.expiryDate}T23:59:59`) < new Date(),
+  const nearExpiryCount = medicines.filter(
+    (m) => getMedicineAlertState(m).isNearExpiry,
   ).length;
   const totalUnits = medicines.reduce(
     (total, m) => total + Number(m.quantity || 0),
@@ -262,34 +245,6 @@ export default function Inventory() {
 
   return (
     <>
-      <PageHeader
-        title="Medicine Inventory"
-        description="Browse stock, check quantities, and manage medicines."
-        action={
-          <>
-            <Button
-              variant="light"
-              onClick={handleSeedDemoInventory}
-              disabled={seeding}
-            >
-              <Database size={16} strokeWidth={1.9} />
-              {seeding ? "Adding demo stock…" : "Add demo stock"}
-            </Button>
-
-            <Button
-              onClick={() => {
-                setForm(initialForm);
-                setEditingId(null);
-                setShowForm(true);
-                setError("");
-              }}
-            >
-              <Plus size={16} strokeWidth={2.2} />
-              Add Medicine
-            </Button>
-          </>
-        }
-      />
 
       {error && (
         <div className="alert-banner error" role="alert">
@@ -340,7 +295,7 @@ export default function Inventory() {
           <div className="metric-content">
             <span>Low Stock</span>
             <strong>{lowStockCount.toLocaleString()}</strong>
-            <span className="metric-subtext">10 units or fewer</span>
+            <span className="metric-subtext">25 units or fewer</span>
           </div>
         </article>
 
@@ -349,9 +304,9 @@ export default function Inventory() {
             <CalendarX2 size={22} strokeWidth={1.9} />
           </div>
           <div className="metric-content">
-            <span>Expired Medicines</span>
-            <strong>{expiredCount.toLocaleString()}</strong>
-            <span className="metric-subtext">Require immediate review</span>
+            <span>Near / Expired</span>
+            <strong>{nearExpiryCount.toLocaleString()}</strong>
+            <span className="metric-subtext">Within 30 days of expiry</span>
           </div>
         </article>
 
@@ -454,9 +409,13 @@ export default function Inventory() {
             />
           </label>
 
+          <div className="row-legend" aria-label="Row status color legend">
+          
+          </div>
+
           <span className="results-count">
             {filteredMedicines.length}{" "}
-            {filteredMedicines.length === 1 ? "medicine" : "medicines"} found
+            {filteredMedicines.length === 1 ? "medicine" : "medicines"}
           </span>
         </div>
 

@@ -1,5 +1,6 @@
 import { PackageOpen, PencilLine, Pill, Trash2 } from "lucide-react";
 import EmptyState from "../common/EmptyState";
+import { getMedicineAlertState } from "../../utils/stockCalculations";
 import StockStatus from "./StockStatus";
 
 export default function MedicineTable({
@@ -35,16 +36,18 @@ export default function MedicineTable({
           {medicines.length ? (
             medicines.map((medicine) => {
               const name = medicine.medicineName || medicine.name || "Unnamed";
-              const expired =
-                medicine.expiryDate &&
-                new Date(`${medicine.expiryDate}T23:59:59`) < new Date();
-              const lowStock = Number(medicine.quantity) <= 10;
-              const derivedStatus =
-                medicine.status ||
-                (expired ? "Expired" : lowStock ? "Low Stock" : "Available");
+              const alert = getMedicineAlertState(medicine);
+              const derivedStatus = medicine.status || alert.status;
+
+              const expiryNote =
+                alert.daysUntilExpiry === null
+                  ? ""
+                  : alert.expired
+                    ? `Expired ${Math.abs(alert.daysUntilExpiry)}d ago`
+                    : `${alert.daysUntilExpiry}d left`;
 
               return (
-                <tr key={medicine.id}>
+                <tr key={medicine.id} className={alert.rowTone}>
                   <td>
                     <span className="medicine-cell">
                       <span className="table-medicine-icon">
@@ -66,7 +69,9 @@ export default function MedicineTable({
                     </span>
                   </td>
                   <td>
-                    <strong>{Number(medicine.quantity ?? 0).toLocaleString()}</strong>
+                    <strong>
+                      {Number(medicine.quantity ?? 0).toLocaleString()}
+                    </strong>
                   </td>
                   <td>
                     {medicine.unitPrice !== undefined &&
@@ -74,7 +79,12 @@ export default function MedicineTable({
                       ? `R ${Number(medicine.unitPrice).toFixed(2)}`
                       : "—"}
                   </td>
-                  <td>{medicine.expiryDate || "—"}</td>
+                  <td>
+                    <div className="expiry-cell">
+                      <span>{medicine.expiryDate || "—"}</span>
+                      {expiryNote && <small>{expiryNote}</small>}
+                    </div>
+                  </td>
                   <td>
                     <StockStatus status={derivedStatus} />
                   </td>

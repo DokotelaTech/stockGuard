@@ -3,17 +3,19 @@ import { BarChart3, PackageOpen } from "lucide-react";
 import EmptyState from "../common/EmptyState";
 import Loader from "../common/Loader";
 import { getMedicines } from "../../services/inventoryService";
+import { getMedicineAlertState } from "../../utils/stockCalculations";
 
-export default function StockChart() {
-  const [medicines, setMedicines] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function StockChart({ medicines: providedMedicines }) {
+  const [fetchedMedicines, setFetchedMedicines] = useState([]);
+  const [loading, setLoading] = useState(!providedMedicines);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (providedMedicines) return undefined;
     let active = true;
     getMedicines()
       .then((items) => {
-        if (active) setMedicines(items);
+        if (active) setFetchedMedicines(items);
       })
       .catch((err) => {
         if (active) setError(err.message || "Unable to load stock data.");
@@ -24,12 +26,15 @@ export default function StockChart() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [providedMedicines]);
+
+  const medicines = providedMedicines ?? fetchedMedicines;
 
   const chartItems = medicines
     .map((medicine) => ({
       ...medicine,
       chartQuantity: Math.max(0, Number(medicine.quantity) || 0),
+      alert: getMedicineAlertState(medicine),
     }))
     .sort((a, b) => b.chartQuantity - a.chartQuantity)
     .slice(0, 8);
@@ -61,21 +66,30 @@ export default function StockChart() {
             {error}
           </p>
         ) : chartItems.length ? (
-          chartItems.map((medicine) => (
-            <div className="stock-chart-row" key={medicine.id}>
-              <span className="stock-chart-name" title={medicine.medicineName}>
-                {medicine.medicineName}
-              </span>
-              <div className="stock-chart-track" aria-hidden="true">
-                <span
-                  style={{
-                    width: `${Math.max(3, (medicine.chartQuantity / maxQuantity) * 100)}%`,
-                  }}
-                />
+          chartItems.map((medicine) => {
+            const barTone =
+              medicine.alert.rowTone === "row-danger"
+                ? "bar-danger"
+                : medicine.alert.rowTone === "row-warning"
+                  ? "bar-warning"
+                  : "bar-success";
+            return (
+              <div className="stock-chart-row" key={medicine.id}>
+                <span className="stock-chart-name" title={medicine.medicineName}>
+                  {medicine.medicineName}
+                </span>
+                <div className="stock-chart-track" aria-hidden="true">
+                  <span
+                    className={barTone}
+                    style={{
+                      width: `${Math.max(4, (medicine.chartQuantity / maxQuantity) * 100)}%`,
+                    }}
+                  />
+                </div>
+                <strong>{medicine.chartQuantity.toLocaleString()}</strong>
               </div>
-              <strong>{medicine.chartQuantity.toLocaleString()}</strong>
-            </div>
-          ))
+            );
+          })
         ) : (
           <EmptyState>
             <PackageOpen size={24} strokeWidth={1.7} />

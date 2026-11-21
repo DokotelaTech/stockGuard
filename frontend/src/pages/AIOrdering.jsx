@@ -10,6 +10,13 @@ import Loader from "../components/common/Loader";
 import PageHeader from "../components/common/PageHeader";
 import { getForecast } from "../services/forecastService";
 
+function riskRowTone(risk) {
+  const value = String(risk || "").toLowerCase();
+  if (value === "high") return "row-danger";
+  if (value === "medium") return "row-warning";
+  return "row-success";
+}
+
 export default function AIOrdering() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -89,9 +96,6 @@ export default function AIOrdering() {
             <strong className="toolbar-title">Recommended orders</strong>
             <p>Prioritised by earliest projected stockout window</p>
           </div>
-          <span className="results-count">
-            {recommendations.length} items to replenish
-          </span>
         </div>
 
         {loading ? (
@@ -112,7 +116,10 @@ export default function AIOrdering() {
               </thead>
               <tbody>
                 {recommendations.map((item) => (
-                  <tr key={`${item.clinic_id}-${item.medicine_id}`}>
+                  <tr
+                    key={`${item.clinic_id}-${item.medicine_id}`}
+                    className={riskRowTone(item.stockout_risk)}
+                  >
                     <td>
                       <strong>{item.medicine_name}</strong>
                     </td>
